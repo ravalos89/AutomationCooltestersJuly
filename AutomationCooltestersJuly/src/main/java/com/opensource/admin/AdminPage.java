@@ -20,13 +20,15 @@ public class AdminPage extends Base{
 	
 	public void validateLogged() {
 		reporter("Validate Logged successfully");
-		waitForElementPresent(imgHeaderOrange);		
+		waitForElementPresent(imgHeaderOrange);
+		takeScreenshot("validateLogged");
 	}
 	
 	public void clickAdmin() {
 		reporter("Click Admin Module");
 		click(lnkAdmin);
 		implicitlyWait();
+		takeScreenshot("clickAdmin");
 	}
 	
 	public void searchUser(String username) {
@@ -34,11 +36,13 @@ public class AdminPage extends Base{
 		type(txtSearchUsername, username);
 		click(btnSearch);
 		implicitlyWait();
+		takeScreenshot("searchUser");
 	}
 	
 	public void validateUsernameTable(String username) {
 		reporter("Verify this value: " + username + " in Admin user table");
 		assertEquals(getText(tblUsername), username);
+		takeScreenshot("validateUsernameTable");
 	}
 	
 	/*

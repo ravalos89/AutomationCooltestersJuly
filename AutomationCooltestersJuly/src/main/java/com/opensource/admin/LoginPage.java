@@ -27,6 +27,7 @@ public class LoginPage extends Base{
 		reporter("Enter Username and Password");
 		type(txtUsername, username);
 		type(txtPassword, password);
+		takeScreenshot("enterUserPwd");
 		click(btnLogin);
 		implicitlyWait();
 	}
@@ -39,6 +40,7 @@ public class LoginPage extends Base{
 		click(lnkWelcome);
 		click(lnkLogout);
 		implicitlyWait();
+		takeScreenshot("logout");
 		closeBrowser();
 	}
 }

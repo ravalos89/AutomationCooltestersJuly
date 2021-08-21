@@ -27,9 +27,13 @@ public class TC001_Admin_SearchEmployee_POM {
 	  login = new LoginPage(driver);
 	  admin = new AdminPage(driver);
 	  
-	  // Test Data
-	  this.username = "Admin";
-	  this.password = "admin123";
+	  // Test Data JSON File
+//	  this.username = base.getJSONValue(this.getClass().getSimpleName(), "username");
+//	  this.password = base.getJSONValue(this.getClass().getSimpleName(), "password");
+	  
+	  // Test Data Excel file
+	  this.username = base.getCellData(this.getClass().getSimpleName(), 1, 0);
+	  this.password = base.getCellData(this.getClass().getSimpleName(), 1, 1);
 	  
   }
 
